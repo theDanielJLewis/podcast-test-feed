@@ -8,38 +8,24 @@
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
-xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+	xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
 >
 <channel>
+	<!-- Standard RSS -->
 	<title>…</title>
-	<atom:link href="…" rel="self" type="application/rss+xml" />
 	<link>…</link>
 	<description>…</description>
 	<lastBuildDate>…</lastBuildDate>
 	<language>…</language>
-	<sy:updatePeriod>…</sy:updatePeriod>
-	<sy:updateFrequency>…</sy:updateFrequency>
-		<generator>…</generator>
-
-<image>
-	<url>…</url>
-	<title>…</title>
-	<link>…</link>
-	<width>…</width>
-	<height>…</height>
-</image> 
-	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
-	<itunes:new-feed-url>…</itunes:new-feed-url>
-	<itunes:summary><![CDATA[…]]></itunes:summary>
-	<itunes:author>…</itunes:author>
-	<itunes:explicit>…</itunes:explicit>
-	<itunes:image href="…" />
-	<itunes:type>…</itunes:type>
-	<itunes:owner>
-		<itunes:name>…</itunes:name>
-		<itunes:email>…</itunes:email>
-	</itunes:owner>
+	<generator>…</generator>
+	<image>
+		<url>…</url>
+		<title>…</title>
+		<link>…</link>
+		<width>…</width>
+		<height>…</height>
+	</image> 
 	<managingEditor>…</managingEditor>
 	<copyright>…</copyright>
 	<itunes:subtitle>…</itunes:subtitle>
@@ -48,29 +34,58 @@ xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
 		<url>…</url>
 		<link>…</link>
 	</image>
+	<!-- Atom -->
+	<atom:link href="…" rel="self" type="application/rss+xml" />
+	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+	<!-- Syndication (dead?) -->
+	<sy:updatePeriod>…</sy:updatePeriod>
+	<sy:updateFrequency>…</sy:updateFrequency>
+	<!-- iTunes -->
+	<itunes:summary><![CDATA[…]]></itunes:summary>
+	<itunes:author>…</itunes:author>
+	<itunes:explicit>…</itunes:explicit>
+	<itunes:image href="…" />
+	<itunes:new-feed-url>…</itunes:new-feed-url>
+	<itunes:owner>
+		<itunes:name>…</itunes:name>
+		<itunes:email>…</itunes:email>
+	</itunes:owner>
 	<itunes:category text="…">
 		<itunes:category text="…"></itunes:category>
 	</itunes:category>
+	<itunes:title>…</itunes:title>
+	<itunes:type>…</itunes:type>
+	<itunes:block>…</itunes:block>
+	<itunes:complete>…</itunes:complete>
+	<!-- RawVoice -->
 	<rawvoice:rating>…</rawvoice:rating>
 	<rawvoice:location>…</rawvoice:location>
 	<rawvoice:frequency>…</rawvoice:frequency>
 	<rawvoice:subscribe feed="…" itunes="…" stitcher="…" spotify="…"></rawvoice:subscribe>
+	<!-- Episodes -->
 	<item>
+		<!-- Standard RSS -->
 		<title>…</title>
 		<link>…</link>
 		<pubDate>…</pubDate>
 		<guid isPermaLink="false">…</guid>
 		<description>…</description>
-		<content:encoded><![CDATA[…]]></content:encoded>
 		<enclosure url="…" length="…" type="audio/mpeg" />
+		<!-- Content -->
+		<content:encoded><![CDATA[…]]></content:encoded>
+		<!-- iTunes -->
+		<itunes:image href="…" />
 		<itunes:subtitle>…</itunes:subtitle>
 		<itunes:summary><![CDATA[…]]></itunes:summary>
 		<itunes:author>…</itunes:author>
 		<itunes:image href="…" />
 		<itunes:episode>…</itunes:episode>
+		<itunes:season>…</itunes:season>
+		<itunes:episodeType>…</itunes:episodeType>
 		<itunes:title>…</itunes:title>
-		<itunes:explicit>…</itunes:explicit>
 		<itunes:duration>…</itunes:duration>
+		<itunes:explicit>…</itunes:explicit>
+		<itunes:block>…</itunes:block>
 		</item>
 </channel>
 </rss>
