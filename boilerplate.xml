@@ -8,12 +8,13 @@
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-	xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+	xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" 
 	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+	xmlns:rp="https://w3id.org/rp/v1"
 >
 <channel>
 
-	<!-- Standard RSS -->
+	<!-- Standard RSS 2.0 - https://cyber.harvard.edu/rss/rss.html -->
 	<title>…</title>
 	<link>…</link>
 	<description>…</description>
@@ -44,7 +45,7 @@
 	<sy:updatePeriod>…</sy:updatePeriod>
 	<sy:updateFrequency>…</sy:updateFrequency>
 
-	<!-- iTunes -->
+	<!-- Apple Podcasts / iTunes - https://help.apple.com/itc/podcasts_connect/#/itcb54353390 -->
 	<itunes:summary><![CDATA[…]]></itunes:summary>
 	<itunes:author>…</itunes:author>
 	<itunes:explicit>…</itunes:explicit>
@@ -62,7 +63,7 @@
 	<itunes:block>…</itunes:block>
 	<itunes:complete>…</itunes:complete>
 
-	<!-- Google Podcasts / Google Play Music Podcasts  -->
+	<!-- Google Podcasts / Google Play Music Podcasts - https://support.google.com/googleplay/podcasts/answer/6260341 -->
 	<googleplay:author>…</googleplay:author>
 	<googleplay:email>…</googleplay:email>
 	<googleplay:image href="…" />
@@ -76,10 +77,26 @@
 	<rawvoice:frequency>…</rawvoice:frequency>
 	<rawvoice:subscribe feed="…" itunes="…" stitcher="…" spotify="…"></rawvoice:subscribe>
 
-	<!-- Episodes -->
+	<!-- RadioPublic - https://www.radiopublic.com/schema/1.0/ -->
+	<rp:play-order>…</rp:play-order>
+	<rp:cta headline="" subtitle="">
+		<rp:action class="…" disposition="…" href="…" label="…">…</rp:action>
+	</rp:cta>
+	<rp:greatest-hits>
+		<rp:episode-reference>…</rp:episode-reference>
+	</rp:greatest-hits>
+	<rp:gateway-episodes>
+		<rp:episode-reference>…</rp:episode-reference>
+	</rp:gateway-episodes>
+	<rp:teaser>…</rp:teaser>
+	<rp:related-programs>
+		<rp:program-link title="…" image-url="…">…</rp:program-link>
+	</rp:related-programs>
+
+	<!-- episodes -->
 	<item>
 
-		<!-- Standard RSS -->
+		<!-- Standard RSS 2.0 - https://cyber.harvard.edu/rss/rss.html -->
 		<title>…</title>
 		<link>…</link>
 		<pubDate>…</pubDate>
@@ -88,9 +105,14 @@
 		<enclosure url="…" length="…" type="audio/mpeg" />
 
 		<!-- Content -->
-		<content:encoded><![CDATA[…]]></content:encoded>
+		<content:encoded><![CDATA[
+			…
+			<a href="…" rel="payment">…</a> <!-- Overcast payment button - https://overcast.fm/podcasterinfo -->
+			…
+			]]>
+		</content:encoded>
 
-		<!-- iTunes -->
+		<!-- Apple Podcasts / iTunes - https://help.apple.com/itc/podcasts_connect/#/itcb54353390 -->
 		<itunes:image href="…" />
 		<itunes:subtitle>…</itunes:subtitle>
 		<itunes:summary><![CDATA[…]]></itunes:summary>
@@ -105,10 +127,13 @@
 		<itunes:block>…</itunes:block>
 		<itunes:order>…</itunes:order> <!-- Deprecated in Apple Podcasts specs, still in Google Podcasts specs -->
 
-		<!-- Google Podcasts / Google Play Music Podcasts -->
+		<!-- Google Podcasts / Google Play Music Podcasts - https://support.google.com/googleplay/podcasts/answer/6260341 -->
 		<googleplay:description>…</googleplay:description>
 		<googleplay:explicit>…</googleplay:explicit>
 		<googleplay:block>…</googleplay:block>
+
+		<!-- RadioPublic - https://www.radiopublic.com/schema/1.0/ -->
+		<rp:episode-reference>…</rp:episode-reference>
 
 	</item>
 </channel>
