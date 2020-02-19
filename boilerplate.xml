@@ -12,6 +12,7 @@
 	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
 >
 <channel>
+
 	<!-- Standard RSS -->
 	<title>…</title>
 	<link>…</link>
@@ -34,12 +35,15 @@
 		<url>…</url>
 		<link>…</link>
 	</image>
+
 	<!-- Atom -->
 	<atom:link href="…" rel="self" type="application/rss+xml" />
 	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+
 	<!-- Syndication (dead?) -->
 	<sy:updatePeriod>…</sy:updatePeriod>
 	<sy:updateFrequency>…</sy:updateFrequency>
+
 	<!-- iTunes -->
 	<itunes:summary><![CDATA[…]]></itunes:summary>
 	<itunes:author>…</itunes:author>
@@ -57,13 +61,24 @@
 	<itunes:type>…</itunes:type>
 	<itunes:block>…</itunes:block>
 	<itunes:complete>…</itunes:complete>
+
+	<!-- Google Podcasts / Google Play Music Podcasts  -->
+	<googleplay:author>…</googleplay:author>
+	<googleplay:email>…</googleplay:email>
+	<googleplay:image href="…" />
+	<googleplay:description>…</googleplay:description>
+	<googleplay:explicit>…</googleplay:explicit>
+	<googleplay:category text="…" />
+
 	<!-- RawVoice -->
 	<rawvoice:rating>…</rawvoice:rating>
 	<rawvoice:location>…</rawvoice:location>
 	<rawvoice:frequency>…</rawvoice:frequency>
 	<rawvoice:subscribe feed="…" itunes="…" stitcher="…" spotify="…"></rawvoice:subscribe>
+
 	<!-- Episodes -->
 	<item>
+
 		<!-- Standard RSS -->
 		<title>…</title>
 		<link>…</link>
@@ -71,8 +86,10 @@
 		<guid isPermaLink="false">…</guid>
 		<description>…</description>
 		<enclosure url="…" length="…" type="audio/mpeg" />
+
 		<!-- Content -->
 		<content:encoded><![CDATA[…]]></content:encoded>
+
 		<!-- iTunes -->
 		<itunes:image href="…" />
 		<itunes:subtitle>…</itunes:subtitle>
@@ -86,6 +103,13 @@
 		<itunes:duration>…</itunes:duration>
 		<itunes:explicit>…</itunes:explicit>
 		<itunes:block>…</itunes:block>
-		</item>
+		<itunes:order>…</itunes:order> <!-- Deprecated in Apple Podcasts specs, still in Google Podcasts specs -->
+
+		<!-- Google Podcasts / Google Play Music Podcasts -->
+		<googleplay:description>…</googleplay:description>
+		<googleplay:explicit>…</googleplay:explicit>
+		<googleplay:block>…</googleplay:block>
+
+	</item>
 </channel>
 </rss>
