@@ -11,6 +11,8 @@
 	xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" 
 	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
 	xmlns:rp="https://w3id.org/rp/v1"
+	xmlns:spotify="https://www.spotify.com/ns/rss"
+	xmlns:psc="https://podlove.org/simple-chapters/"
 >
 <channel>
 
@@ -71,15 +73,19 @@
 	<googleplay:explicit>…</googleplay:explicit>
 	<googleplay:category text="…" />
 
-	<!-- RawVoice -->
+	<!-- RawVoice - https://rawvoice.com/services/tools-and-resources/rawvoice-rss-2-0-module-xmlns-namespace-rss2/ -->
 	<rawvoice:rating>…</rawvoice:rating>
 	<rawvoice:location>…</rawvoice:location>
 	<rawvoice:frequency>…</rawvoice:frequency>
 	<rawvoice:subscribe feed="…" itunes="…" stitcher="…" spotify="…"></rawvoice:subscribe>
 
+	<!-- Spotify - https://podcasters.spotify.com/terms/Spotify_Podcast_Delivery_Specification_v1.5.pdf -->
+	<spotify:limit recentCount="…" />
+	<spotify:countryOfOrigin>…</spotify:countryOfOrigin>
+
 	<!-- RadioPublic - https://www.radiopublic.com/schema/1.0/ -->
 	<rp:play-order>…</rp:play-order>
-	<rp:cta headline="" subtitle="">
+	<rp:cta headline="…" subtitle="…">
 		<rp:action class="…" disposition="…" href="…" label="…">…</rp:action>
 	</rp:cta>
 	<rp:greatest-hits>
@@ -134,6 +140,11 @@
 
 		<!-- RadioPublic - https://www.radiopublic.com/schema/1.0/ -->
 		<rp:episode-reference>…</rp:episode-reference>
+
+		<!-- Podlove Simple Chapters - https://podlove.org/simple-chapters/ -->
+		<psc:chapters version="1.1">
+			<psc:chapter start="…" title="…" href="…" image="…" />
+		</psc:chapters>
 
 	</item>
 </channel>
