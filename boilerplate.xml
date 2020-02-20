@@ -107,7 +107,7 @@
 		<link>…</link>
 		<pubDate>…</pubDate>
 		<guid isPermaLink="false">…</guid>
-		<description>…</description>
+		<description>…</description> <!-- Often used when <content:encoded> and <itunes:summary> are missing, and instead of either in some apps -->
 		<enclosure url="…" length="…" type="audio/mpeg" />
 
 		<!-- Content -->
@@ -122,7 +122,7 @@
 		<itunes:image href="…" />
 		<itunes:subtitle>…</itunes:subtitle>
 		<itunes:summary><![CDATA[…]]></itunes:summary>
-		<itunes:author>…</itunes:author>
+		<itunes:author>…</itunes:author> <!-- Deprecated in Apple Podcasts specs, may still be used by some apps -->
 		<itunes:image href="…" />
 		<itunes:episode>…</itunes:episode>
 		<itunes:season>…</itunes:season>
