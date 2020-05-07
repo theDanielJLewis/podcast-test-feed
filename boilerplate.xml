@@ -33,11 +33,6 @@
 	<managingEditor>…</managingEditor>
 	<copyright>…</copyright>
 	<itunes:subtitle>…</itunes:subtitle>
-	<image>
-		<title>…</title>
-		<url>…</url>
-		<link>…</link>
-	</image>
 
 	<!-- Atom -->
 	<atom:link href="…" rel="self" type="application/rss+xml" />
